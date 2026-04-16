@@ -1,0 +1,6 @@
+streamlit
+pandas
+plotly
+yt-dlp
+apify-client
+python-pptx

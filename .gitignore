@@ -1,0 +1,22 @@
+# Python Virtual Environments
+venv/
+env/
+.venv/
+
+# Ignore compiled Python files
+__pycache__/
+
+# NEVER UPLOAD SECRETS!
+.streamlit/secrets.toml
+
+# Ignore downloaded powerpoints
+*.pptx
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
