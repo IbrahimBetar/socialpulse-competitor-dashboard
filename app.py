@@ -782,6 +782,7 @@ def main():
             file_name=f"SocialPulse_Analysis_{start_date}_to_{end_date}.pptx",
             mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
         )
-
+st.markdown("---")
+st.caption("Contact: [elbetar2001@gmail.com](mailto:elbetar2001@gmail.com)")
 if __name__ == "__main__":
     main()
