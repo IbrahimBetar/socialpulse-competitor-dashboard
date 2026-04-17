@@ -389,12 +389,10 @@ def main():
     st.sidebar.subheader("🏢 Competitor Brands")
     brands_input = []
 
-    for i in range(1, 4):
-        with st.sidebar.expander(f"Brand {i}", expanded=(i == 1)):
-            for i in range(1, 4):
+   for i in range(1, 4):
     with st.sidebar.expander(f"Brand {i}", expanded=(i == 1)):
         b_name = st.text_input(f"Brand Name", key=f"name_{i}", placeholder="e.g., Nike")
-        b_yt = st.text_input(f"YouTube URL", key=f"yt_{i}", placeholder="https://youtube...")
+        b_yt = st.text_input(f"YouTube URL", key=f"yt_{i}", placeholder="https://youtube.com/@nike")
         b_tt = st.text_input(f"TikTok Handle", key=f"tt_{i}", placeholder="nike")
         st.text_input("Meta Handle", value="Coming Soon", disabled=True, key=f"meta_{i}")
 
