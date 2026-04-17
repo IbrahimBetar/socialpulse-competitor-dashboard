@@ -390,15 +390,13 @@ def main():
     brands_input = []
 
    for i in range(1, 4):
-    with st.sidebar.expander(f"Brand {i}", expanded=(i == 1)):
-        b_name = st.text_input(f"Brand Name", key=f"name_{i}", placeholder="e.g., Nike")
-        b_yt = st.text_input(f"YouTube URL", key=f"yt_{i}", placeholder="https://youtube.com/@nike")
-        b_tt = st.text_input(f"TikTok Handle", key=f"tt_{i}", placeholder="nike")
-        st.text_input("Meta Handle", value="Coming Soon", disabled=True, key=f"meta_{i}")
+        with st.sidebar.expander(f"Brand {i}", expanded=(i == 1)):
+            b_name = st.text_input(f"Brand Name", key=f"name_{i}", placeholder="e.g., Nike")
+            b_yt = st.text_input(f"YouTube URL", key=f"yt_{i}", placeholder="https://youtube.com/@nike")
+            b_tt = st.text_input(f"TikTok Handle", key=f"tt_{i}", placeholder="nike")
 
-        if b_name and (b_yt or b_tt):
-            brands_input.append({"name": b_name, "youtube": b_yt, "tiktok": b_tt})
-
+            if b_name and (b_yt or b_tt):
+                brands_input.append({"name": b_name, "youtube": b_yt, "tiktok": b_tt})
     col1, col2 = st.sidebar.columns(2)
 
     if col1.button("▶ Run Analysis"):
