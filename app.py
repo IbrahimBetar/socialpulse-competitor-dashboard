@@ -389,7 +389,7 @@ def main():
     st.sidebar.subheader("🏢 Competitor Brands")
     brands_input = []
 
-   for i in range(1, 4):
+    for i in range(1, 4):
         with st.sidebar.expander(f"Brand {i}", expanded=(i == 1)):
             b_name = st.text_input(f"Brand Name", key=f"name_{i}", placeholder="e.g., Nike")
             b_yt = st.text_input(f"YouTube URL", key=f"yt_{i}", placeholder="https://youtube.com/@nike")
@@ -397,6 +397,7 @@ def main():
 
             if b_name and (b_yt or b_tt):
                 brands_input.append({"name": b_name, "youtube": b_yt, "tiktok": b_tt})
+
     col1, col2 = st.sidebar.columns(2)
 
     if col1.button("▶ Run Analysis"):
@@ -785,3 +786,4 @@ st.markdown("---")
 st.caption("Contact: [elbetar2001@gmail.com](mailto:elbetar2001@gmail.com)")
 if __name__ == "__main__":
     main()
+    
